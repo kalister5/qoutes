@@ -12,7 +12,7 @@ body{
     height: 60px;
     margin-right: 20px;
     padding-top: 33px;
-    padding-right: 30px
+    padding-right: 2px
 }
 .h7 {
     display: flex;
@@ -26,4 +26,8 @@ body{
   background-color: red;
   color: white;
   text-align: center;
+}
+.btn{
+  color: green;
+
 }
