@@ -14,44 +14,32 @@
           <h4>so create a motivational quote and motivate people.</h4>
         </font>
       </font>
+      <app-form (createQuote)="plusQuote($event)"></app-form>
 
-      <div class="form-group ">
-        <label for="text">Name</label><input type="text" id="Name" class="form-control" placeholder="Abdullahi" size="20" required>
-      </div>
-
-      <div class="form-group">
-        <label for="text">Author</label><input type="text" id="Author" class="form-control" placeholder="Mohandas  Gandhi." size="20" required>
-      </div>
-      <div class="form-group"><br>
-        <label for="qoute">Your Inspiration Qoute: </label> <textarea name="name" rows="4" cols="80" placeholder="Happiness is when what you think, what you say, and what you do are in harmony.
-
-If you don't ask, you don't get it ."></textarea>
-      </div><br>
-      <button type="button" name="button">
-        <p class="btn">Post Quote!</p>
-      </button><br>
-
-      <button type="button" class="new-quote button">New Quote!</button><br>
+      <ul *ngFor='let quote of quotes'>
+        <li>
+          <p>Name :{{quote.name}}</p> <br>
+          <p>Author : {{quote.author}} </p><br>
+          <p>Quote :{{quote.inspire}}</p> <button class="btn btn-success" (click)='upvote()'><i class="fa fa-thumbs-up">{{count}} </i></button>
 
 
+          <button class="btn btn-danger" (click)='downvote()'><i class="fa fa-thumbs-down">{{add}}</i></button>
+
+
+          <button class="btn btn-outline-danger">delete<i class="fa fa-trash"></i></button>
+        </li>
+      </ul>
       <div class="kal">
 
-        <button class="btn btn-success"><i class="fa fa-thumbs-up"> </i></button>
-
-
-        <button class="btn btn-danger"><i class="fa fa-thumbs-down"></i></button>
-
-
-        <button class="btn btn-outline-danger">delete<i class="fa fa-trash"></i></button>
 
       </div>
 
 
-      <div class="footer">
+      <!-- <div class="footer">
 
         <p>Happiness is when what you think, what you say, and what you do are in harmony.<br>Mohandas Karamchand Gandhi.</p>
 
-      </div>
+      </div> -->
     </div>
   </header>
 
